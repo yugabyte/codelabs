@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="/yb-includes/bootstrap/css/bootstrap.min.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -26,7 +27,10 @@
 		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
 
 			<div class="site-branding-container">
-				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+				<div class="site-branding">
+					<h1 class="h1 site-title">Distributed SQL Codelabs</h1>
+					<h3><small class="text-muted">Hands-on tutorials by developers for developers</small></h3>
+				</div>
 			</div><!-- .layout-wrap -->
 
 			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>

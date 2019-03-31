@@ -2511,8 +2511,6 @@ h6 {
 
 h1:not(.site-title):before,
 h2:before {
-  background: #767676;
-  content: "\020";
   display: block;
   height: 2px;
   margin: 1rem 0;
@@ -3724,7 +3722,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 3rem 0;
+    padding: 3rem 0 0 0;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -4178,9 +4176,23 @@ body.page .main-navigation {
   margin-top: 0;
 }
 
+.entry-highlight {
+  background-color: #e9ecef;
+}
+
+.entry-simple {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
 .entry .entry-header {
   margin: calc(3 * 1rem) 1rem 1rem;
   position: relative;
+}
+
+.entry-highlight .entry-header {
+  padding-top: 25px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -4194,8 +4206,6 @@ body.page .main-navigation {
 }
 
 .entry .entry-title:before {
-  background: #767676;
-  content: "\020";
   display: block;
   height: 2px;
   margin: 1rem 0;
@@ -4389,11 +4399,30 @@ body.page .main-navigation {
 }
 
 .entry .entry-content a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .entry .entry-content a.button, .entry .entry-content a:hover {
   text-decoration: none;
+}
+
+.entry .entry-title .entry-content-read-more a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.entry .entry-title .entry-content-read-more a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.entry .entry-content .entry-content-read-more a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.entry .entry-content .entry-content-read-more a:hover {
+  color: #fff;
 }
 
 .entry .entry-content a.button {
