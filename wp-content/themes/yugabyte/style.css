@@ -4406,25 +4406,6 @@ body.page .main-navigation {
   text-decoration: none;
 }
 
-.entry .entry-title .entry-content-read-more a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.entry .entry-title .entry-content-read-more a:link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.entry .entry-content .entry-content-read-more a:visited {
-  color: #fff;
-  text-decoration: none;
-}
-
-.entry .entry-content .entry-content-read-more a:hover {
-  color: #fff;
-}
-
 .entry .entry-content a.button {
   display: inline-block;
 }
@@ -6394,3 +6375,90 @@ svg {
 .gallery-item > div > a:focus {
   box-shadow: 0 0 0 2px #0073aa;
 }
+
+/******
+ * CSS for categories page
+ ******/
+
+.section-top-spacing {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+ .bd-sidebar {
+  order: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  position: sticky;
+  z-index: 1000;
+  height: calc(100vh - 4rem);
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  flex: 0 1 320px;
+}
+
+.bd-sidebar .nav > li > a {
+  display: block;
+  padding: .25rem 1.5rem;
+  @include font-size(90%);
+  color: rgba(0, 0, 0, .65);
+}
+
+.bd-sidebar .nav > li > a:hover {
+  color: rgba(0, 0, 0, .85);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.bd-sidebar .nav > .active > a,
+.bd-sidebar .nav > .active:hover > a {
+  font-weight: 600;
+  color: rgba(0, 0, 0, .85);
+  background-color: transparent;
+}
+
+
+.bd-links {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: -15px;
+  margin-left: -15px;
+
+  max-height: calc(100vh - 9rem);
+  overflow-y: auto;
+
+  display: block !important;
+}
+
+.bd-toc-link {
+  display: block;
+  padding: .25rem 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .65);
+
+  &:hover {
+    color: rgba(0, 0, 0, .85);
+    text-decoration: none;
+  }
+}
+
+.bd-toc-item {
+  &.active {
+    margin-bottom: 1rem;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    > .bd-toc-link {
+      color: rgba(0, 0, 0, .85);
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    > .bd-sidenav {
+      display: block;
+    }
+  }
+}
+

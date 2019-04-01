@@ -43,7 +43,7 @@ $NUM_CARDS_PER_ROW = 3;
 				) );
 				$num_entries = 0; ?>
 
-				<div class="entry-content">
+				<div class="row" style="padding:0 25px;">
 				<?php
 				foreach ( $categories as $category ) {
 					// Skip anything that is uncategorized. 
@@ -60,8 +60,8 @@ $NUM_CARDS_PER_ROW = 3;
 					    <h5 class="card-title"><?php echo esc_html( $category->name ) ?></h5>
 					    <h6 class="card-subtitle mb-2 text-muted"><?php echo esc_html( $parent_category->name ) ?></h6>
 					    <p class="card-text"><?php echo esc_html( $category->description ) ?></p>
-					    <div class="entry-content-read-more">
-					      <a href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>" class="btn btn-primary float-right">Read More</a>
+					    <div>
+					      <a href="<?php echo esc_url( get_category_link( $category->term_id ) ) ?>" class="btn btn-primary float-right button">Read More</a>
 					    </div> <!-- entry-content-read-more -->
 					  </div> <!-- card-body -->
 					</div> <!-- card -->
