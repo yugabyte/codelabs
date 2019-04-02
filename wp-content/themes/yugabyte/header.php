@@ -26,12 +26,14 @@
 
 		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
 
+			<?php if (!is_category()) { ?>
 			<div class="site-branding-container">
 				<div class="site-branding">
 					<h1 class="h1 site-title">Distributed SQL Codelabs</h1>
 					<h3><small class="text-muted">Hands-on tutorials by developers for developers</small></h3>
 				</div>
 			</div><!-- .layout-wrap -->
+		<?php } ?>
 
 			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
 				<div class="site-featured-image">
