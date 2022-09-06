@@ -1,5 +1,5 @@
 # codelabs
-Code Labs for YugaByte DB
+Code Labs for YugabyteDB
 
 ## Set up a LAMP Server.
 
